@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import './Menu.css';
-import Orange from '../../images/Orange.jpg'
+import Kimchi from '../../images/kimchi.png'
+import Peri from '../../images/peri.png'
+import Moorish from '../../images/moorish.png'
+import Meat from '../../images/meat.png'
+import Sriracha from '../../images/sriracha.png'
+import Wild from '../../images/wild.png'
+import Mediterranean from '../../images/mediterranean.png'
+import Pepperoni from '../../images/pepperoni.png'
+import Mexican from '../../images/mexican.png'
+import Smoked from '../../images/smoked.png'
+import Garlic from '../../images/garlic.png'
+import Spiced from '../../images/spiced.png'
+import Florentine from '../../images/florentine.png'
+import Margherita from '../../images/margherita.png'
+import Vegetarian from '../../images/vegetarian.png'
+import Roast from '../../images/roast.png'
 import Bgi from '../../images/Pizza-bg.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
@@ -11,13 +26,14 @@ import Media from '../../components/Media/Media';
 import Footer from '../../components/Footer/Footer';
 import SideBar from '../../components/SideBar/SideBar/SideBar';
 import CartTotals from '../../components/Cart/CartTotal/CartTotal';
+import { Route, Link } from 'react-router';
 
 
 const ArrowLeft = <FontAwesomeIcon icon={faArrowLeft} />
 const ArrowRight = <FontAwesomeIcon icon={faArrowRight} />
 
 class Menu extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       sidebarIsClicked: false,
@@ -39,12 +55,12 @@ class Menu extends Component {
 
   render() {
     return (
-      
+
       <div className="menu" style={{ backgroundImage: `url(${Bgi})` }}>
-        <SideBar sidestatus={this.state.sidebarIsClicked}/>
-        <CartTotals cartstatus={this.state.cartIsClicked}/>
-        <Header toggleSideBar={this.toggleSideBar} toggleCart={this.toggleCart} 
-        sidestatus={this.state.sidebarIsClicked} cartstatus={this.state.cartIsClicked}/>
+        <SideBar sidestatus={this.state.sidebarIsClicked} />
+        <CartTotals cartstatus={this.state.cartIsClicked} />
+        <Header toggleSideBar={this.toggleSideBar} toggleCart={this.toggleCart}
+          sidestatus={this.state.sidebarIsClicked} cartstatus={this.state.cartIsClicked} />
         <div className="catelogue">
           <div className="catelogue__topbar">
             <div className="catelogue__filter">
@@ -341,7 +357,7 @@ class Menu extends Component {
           </div>
           <div className="catelogue__product">
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Kimchi} alt="Kimchi" /></div>
               <div className="pizza__description">
                 <h3>Kimchi BBQ Chicken</h3>
                 <p>
@@ -360,7 +376,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Peri} alt="Peri-Peri" /></div>
               <div className="pizza__description">
                 <h3>Peri-Peri</h3>
                 <p>
@@ -379,7 +395,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Moorish} alt="Moorish-Lamb" /></div>
               <div className="pizza__description">
                 <h3>Moorish Lamb</h3>
                 <p>
@@ -398,7 +414,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Meat} alt="Meat-Deluxe" /></div>
               <div className="pizza__description">
                 <h3>Meat Deluxe</h3>
                 <p>
@@ -417,7 +433,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Sriracha} alt="Sriracha Beef" /></div>
               <div className="pizza__description">
                 <h3>Sriracha Beef</h3>
                 <p>
@@ -436,7 +452,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Wild} alt="Wild-Mushroom-Wagyu" /></div>
               <div className="pizza__description">
                 <h3>Wild Mushroom Wagyu</h3>
                 <p>
@@ -455,7 +471,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Mediterranean} alt="Mediterranean" /></div>
               <div className="pizza__description">
                 <h3>Mediterranean</h3>
                 <p>
@@ -474,7 +490,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Pepperoni} alt="pepperoni" /></div>
               <div className="pizza__description">
                 <h3>Pepperoni</h3>
                 <p>
@@ -493,7 +509,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Mexican} alt="Mexican" /></div>
               <div className="pizza__description">
                 <h3>Mexican</h3>
                 <p>
@@ -512,7 +528,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Smoked} alt="Smoked-Salmon" /></div>
               <div className="pizza__description">
                 <h3>Smoked Salmon</h3>
                 <p>
@@ -531,7 +547,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Garlic} alt="Garlic-Prawn" /></div>
               <div className="pizza__description">
                 <h3>Garlic Prawn</h3>
                 <p>
@@ -550,7 +566,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Spiced} alt="Spiced-Pumpkin" /></div>
               <div className="pizza__description">
                 <h3>Spiced Pumpkin</h3>
                 <p>
@@ -569,7 +585,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Florentine} alt="Florentine-Ricotta" /></div>
               <div className="pizza__description">
                 <h3>Florentine Ricotta</h3>
                 <p>
@@ -588,7 +604,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Margherita} alt="Margherita" /></div>
               <div className="pizza__description">
                 <h3>Margherita</h3>
                 <p>
@@ -607,7 +623,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Vegetarian} alt="Vegetarian-Supreme" /></div>
               <div className="pizza__description">
                 <h3>Vegetarian Supreme</h3>
                 <p>
@@ -626,7 +642,7 @@ class Menu extends Component {
               </form>
             </div>
             <div className="catelogue__product--name">
-              <div><img src={Orange} alt="pepperoni" /></div>
+              <div><img src={Roast} alt="Roast-Beetroot" /></div>
               <div className="pizza__description">
                 <h3>Roast Beetroot</h3>
                 <p>
